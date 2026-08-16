@@ -23,6 +23,16 @@ html,body{
     
     /*border color*/
     --border-primary-color: #555;
+
+    /*border radius*/
+    --border-radius-xs: 4px;
+    --border-radius-sm: 8px;
+    --border-radius-md: 12px;
+    --border-radius-lg: 26px;   
+    --border-radius-xl: 20px;
+    --border-radius-xxl: 24px;
+    --border-radius-xxxl: 30px;
+
 }
 
 html{
@@ -36,6 +46,10 @@ main, section{
 }
 section{
      padding: var(--space-xxl);
+     display: flex;
+     flex-direction: column;
+     height: 100%;
+    gap: var(--space-lg);
 }
 section .infos{
     width: 100%;
@@ -45,4 +59,22 @@ section .infos{
 .info{
     padding: var(--space-sm) var(--space-md);
     border: 1px solid var(--border-primary-color);
+    border-radius: var(--border-radius-sm);
+}
+
+.board{
+    border: 1px solid var(--border-primary-color);
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(30px,1fr));
+    grid-template-rows: repeat(auto-fill, minmax(30px,1fr));
+    
+
+}
+
+.block{
+    width: 30px;
+    height: 30px;
+    border: 1px solid var(--border-primary-color);
+    
 }
